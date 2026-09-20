@@ -2,7 +2,7 @@
 
 class AudioEngine {
   private ctx: AudioContext | null = null;
-  private isEnabled: boolean = false;
+  private isEnabled: boolean = true;
 
   private init() {
     if (!this.ctx && typeof window !== "undefined") {
@@ -15,7 +15,7 @@ class AudioEngine {
       }
     }
     if (this.ctx && this.ctx.state === "suspended") {
-      this.ctx.resume();
+      this.ctx.resume().catch(() => {});
     }
   }
 

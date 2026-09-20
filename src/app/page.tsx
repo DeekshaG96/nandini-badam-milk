@@ -118,7 +118,7 @@ export default function NandiniBadamExperience() {
           tilt={gyro}
           sensesMode={sensesMode}
           isUncapped={isUncapped}
-          onUncap={() => setIsUncapped(true)}
+          onUncap={() => setIsUncapped((prev) => !prev)}
           gpuProfile={gpuProfile}
           isReducedMotion={isReducedMotion}
         />
@@ -227,7 +227,7 @@ export default function NandiniBadamExperience() {
       {/* 6. Floating Interactive Control Bar (Chill Factor & Uncap) */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-md pointer-events-auto">
         <ChillFactorSlider value={chillFactor} onChange={setChillFactor} t={t} />
-        <UncapTrigger isUncapped={isUncapped} onUncap={() => setIsUncapped(true)} t={t} />
+        <UncapTrigger isUncapped={isUncapped} onUncap={() => setIsUncapped((prev) => !prev)} t={t} />
       </div>
 
       {/* 7. Nutrition Deep Dive & Fuel Calculator */}

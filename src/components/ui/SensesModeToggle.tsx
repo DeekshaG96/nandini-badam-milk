@@ -10,7 +10,7 @@ interface SensesModeToggleProps {
 }
 
 export function SensesModeToggle({ sensesMode, onSensesToggle }: SensesModeToggleProps) {
-  const [isAudioOn, setIsAudioOn] = useState(false);
+  const [isAudioOn, setIsAudioOn] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
   const toggleAudio = () => {

@@ -1,14 +1,14 @@
 # 🥛 Nandini Badam Milk — 3D Cinematic Scrollytelling Web App
 ### *The Royal Taste of Karnataka · Karnataka Milk Federation (KMF)*
 
-[![Next.js 15](https://img.shields.io/badge/Next.js-15.1-black?logo=next.js)](https://nextjs.org/)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15.5.25-black?logo=next.js)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React-19.0-blue?logo=react)](https://react.dev/)
-[![Three.js / R3F](https://img.shields.io/badge/R3F-Three.js-orange?logo=three.js)](https://docs.pmnd.rs/react-three-fiber)
-[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-CSS_v4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-0.173-orange?logo=three.js)](https://threejs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS_v3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![WCAG 2.2 AA](https://img.shields.io/badge/A11y-WCAG_2.2_AA-green)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-success?logo=vercel)](https://nandini-badam-milk.vercel.app)
 
-An award-winning, Awwwards/FWA-grade interactive 3D WebGL showcase for **Nandini Badam Flavoured Milk** by the **Karnataka Milk Federation (KMF)**. Built with Next.js 15 App Router, React 19, React Three Fiber (R3F), custom GLSL fluid and glass refraction shaders, spatial Web Audio, and an interactive "Chill Factor" thermal slider.
+An award-winning, Awwwards/FWA-grade interactive 3D WebGL showcase for **Nandini Badam Flavoured Milk** by the **Karnataka Milk Federation (KMF)**. Built with Next.js 15 App Router, React 19, native Three.js WebGL canvas architecture, custom GLSL fluid and glass refraction shaders, spatial Web Audio, and an interactive "Chill Factor" thermal slider.
 
 ---
 
@@ -20,7 +20,7 @@ An award-winning, Awwwards/FWA-grade interactive 3D WebGL showcase for **Nandini
    - **Low Tier / Power-Saver**: Power-saving mode with 15 particle instances and disabled physics calculations for locked 60 FPS on budget chipsets.
    - *Benchmarking Override*: Add `?gpu=high`, `?gpu=med`, or `?gpu=low` to any URL.
 
-2. **Real-Time GLSL Shaders**
+2. **Real-Time GLSL Shaders & Fluid Simulation**
    - **Glass Refraction & Frosting (`glassShader.ts`)**: Implements physical Fresnel reflection, Snell's law refraction, chromatic dispersion, and procedural cellular bump mapping for frosty condensation droplets at 4°C.
    - **Fluid Badam Milk Dynamics (`liquidShader.ts`)**: Simulates surface wave displacement reacting to mouse drag, scroll momentum, and mobile gyroscope tilt vectors (`u_tilt`), with suspended crushed badam flecks.
    - **Rising Saffron Steam (`steamShader.ts`)**: Dynamically activates when the temperature slider warms past 50°C.
@@ -46,12 +46,15 @@ An award-winning, Awwwards/FWA-grade interactive 3D WebGL showcase for **Nandini
 7. **Spatial Web Audio API Engine**
    - Pure procedural sound synthesizers for roasted badam crunch, liquid milk pour, glass clink, and bottle uncap pop.
 
+8. **Zero-Exception Safety (`CanvasErrorBoundary`)**
+   - Isolated WebGL lifecycle with native Three.js and an automatic fallback card to ensure 100% resilient rendering on any browser.
+
 ---
 
 ## 🛠️ Tech Stack Architecture
 
-- **Framework**: Next.js 15 (App Router, React 19, TypeScript)
-- **3D & Shaders**: React Three Fiber (R3F), Drei, Three.js, Custom GLSL Shaders
+- **Framework**: Next.js 15.5.25 (App Router, React 19, TypeScript)
+- **3D & Shaders**: Three.js (`three@0.173.0`), Custom GLSL Shaders (Refraction, Fluid dynamics, Steam), CanvasErrorBoundary
 - **Styling**: Tailwind CSS, Lucide Icons, Glassmorphism
 - **Typography**: Google Fonts (Cinzel, Outfit, Noto Sans Kannada)
 - **Audio**: Web Audio API Procedural Synthesizer
@@ -88,7 +91,7 @@ Deploy easily to **Vercel**:
 ```bash
 npx vercel
 ```
-Or connect your GitHub repository directly to Vercel for continuous deployment on every git push.
+Live Production Site: **[https://nandini-badam-milk.vercel.app](https://nandini-badam-milk.vercel.app)**
 
 ---
 

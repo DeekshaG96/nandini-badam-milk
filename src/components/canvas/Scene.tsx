@@ -459,8 +459,10 @@ export function Scene({
         capGroup.rotation.x += delta * 2;
         capGroup.rotation.z += delta * 3;
       } else {
-        capGroup.position.y = 2.42;
-        capGroup.rotation.set(0, 0, 0);
+        capGroup.position.y += (2.42 - capGroup.position.y) * 0.15;
+        capGroup.rotation.x += (0 - capGroup.rotation.x) * 0.15;
+        capGroup.rotation.y += (0 - capGroup.rotation.y) * 0.15;
+        capGroup.rotation.z += (0 - capGroup.rotation.z) * 0.15;
       }
 
       // Exploded Ingredients Milestone Animation
