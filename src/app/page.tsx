@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Scene } from "@/components/canvas/Scene";
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(
+  () => import("@/components/canvas/Scene").then((mod) => mod.Scene),
+  { ssr: false }
+);
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { SensesModeToggle } from "@/components/ui/SensesModeToggle";
 import { ChillFactorSlider } from "@/components/ui/ChillFactorSlider";

@@ -325,7 +325,6 @@ export function NandiniBottle({
           audioEngine.playUncapPop();
           if (onUncap) onUncap();
         }}
-        className="cursor-pointer"
       >
         <mesh>
           <cylinderGeometry args={[0.38, 0.38, 0.18, 32]} />
