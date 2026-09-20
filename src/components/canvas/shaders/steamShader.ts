@@ -5,10 +5,8 @@ export const steamVertexShader = /* glsl */ `
   attribute float a_random;
 
   varying float vAlpha;
-  varying vec2 vUv;
 
   void main() {
-    vUv = uv;
     vec3 pos = position;
 
     // Rising spiral motion
@@ -29,7 +27,6 @@ export const steamVertexShader = /* glsl */ `
 
 export const steamFragmentShader = /* glsl */ `
   varying float vAlpha;
-  varying vec2 vUv;
 
   void main() {
     // Soft radial particle gradient
