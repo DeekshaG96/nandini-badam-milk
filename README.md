@@ -6,7 +6,7 @@
 [![Three.js / R3F](https://img.shields.io/badge/R3F-Three.js-orange?logo=three.js)](https://docs.pmnd.rs/react-three-fiber)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-CSS_v4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![WCAG 2.2 AA](https://img.shields.io/badge/A11y-WCAG_2.2_AA-green)](https://www.w3.org/WAI/standards-guidelines/wcag/)
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://vercel.com/)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-success?logo=vercel)](https://nandini-badam-milk.vercel.app)
 
 An award-winning, Awwwards/FWA-grade interactive 3D WebGL showcase for **Nandini Badam Flavoured Milk** by the **Karnataka Milk Federation (KMF)**. Built with Next.js 15 App Router, React 19, React Three Fiber (R3F), custom GLSL fluid and glass refraction shaders, spatial Web Audio, and an interactive "Chill Factor" thermal slider.
 
