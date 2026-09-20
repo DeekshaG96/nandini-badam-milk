@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-top: #fffdf5;
+  --bg-bot: #fcd580;
+  --glow-rgb: 255, 215, 95;
+  --ink: #3c1e05;
+  --ink-soft: #7a4610;
+  --nandini-blue: #0b4ea2;
+  --saffron: #f59e0b;
+  --saffron-deep: #d97706;
+  --gold: #fbbf24;
+  --card-bg: rgba(255, 252, 240, 0.82);
+  --card-border: rgba(217, 119, 6, 0.22);
+}
+
+[data-theme="dark"] {
+  --bg-top: #190f05;
+  --bg-bot: #3a2007;
+  --glow-rgb: 245, 170, 35;
+  --ink: #fff6e4;
+  --ink-soft: #f7ca7b;
+  --card-bg: rgba(36, 21, 8, 0.85);
+  --card-border: rgba(251, 191, 36, 0.25);
+}
+
+/* Senses Mode: Golden Hour / Evening */
+[data-senses="golden-hour"] {
+  --bg-top: #2c1404;
+  --bg-bot: #5a2608;
+  --glow-rgb: 255, 145, 20;
+  --ink: #ffedd5;
+  --ink-soft: #fed7aa;
+}
+
+/* Senses Mode: Fresh Morning */
+[data-senses="morning"] {
+  --bg-top: #fffffb;
+  --bg-bot: #fef0c7;
+  --glow-rgb: 255, 235, 160;
+  --ink: #2b1807;
+  --ink-soft: #63360b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-top);
+  color: var(--ink);
+  transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s ease;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Hoysala & Hampi Architectural Lattice Background Watermark */
+.hoysala-watermark {
+  background-image: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d97706' stroke-width='0.6' stroke-opacity='0.15'%3E%3Cpolygon points='40,0 80,40 40,80 0,40' /%3E%3Ccircle cx='40' cy='40' r='18' /%3E%3Cpolygon points='40,12 68,40 40,68 12,40' /%3E%3Ccircle cx='40' cy='40' r='6' /%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* WebGL multi-touch scroll safety */
+.canvas-wrapper {
+  touch-action: pan-y !important;
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-top);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--saffron);
+  border-radius: 999px;
+  border: 2px solid var(--bg-top);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--saffron-deep);
+}

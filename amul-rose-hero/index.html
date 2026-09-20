@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nandini Badam Milk | KMF Karnataka Milk Federation</title>
+<meta name="description" content="Experience Nandini Badam Milk — Royal Kashmiri Kesar, crunchy real almond bits, and 100% pure KMF cow milk. An iconic Karnataka heritage taste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  
+  /* Nandini Badam Milk Saffron Palette */
+  --bg-top: #fffdf5;
+  --bg-bot: #fcd580;
+  --glow-rgb: 255, 215, 95;
+  --ink: #3c1e05;
+  --ink-soft: #7a4610;
+  --nandini-blue: #0b4ea2;
+  --nandini-blue-dark: #072f63;
+  --saffron: #f59e0b;
+  --saffron-deep: #d97706;
+  --gold: #fbbf24;
+  --card-bg: rgba(255, 252, 240, 0.78);
+  --card-border: rgba(217, 119, 6, 0.22);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-top: #190f05;
+    --bg-bot: #3a2007;
+    --glow-rgb: 245, 170, 35;
+    --ink: #fff6e4;
+    --ink-soft: #f7ca7b;
+    --card-bg: rgba(36, 21, 8, 0.85);
+    --card-border: rgba(251, 191, 36, 0.25);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg-top: #190f05;
+  --bg-bot: #3a2007;
+  --glow-rgb: 245, 170, 35;
+  --ink: #fff6e4;
+  --ink-soft: #f7ca7b;
+  --card-bg: rgba(36, 21, 8, 0.85);
+  --card-border: rgba(251, 191, 36, 0.25);
+}
+
+:root[data-theme="light"] {
+  --bg-top: #fffdf5;
+  --bg-bot: #fcd580;
+  --glow-rgb: 255, 215, 95;
+  --ink: #3c1e05;
+  --ink-soft: #7a4610;
+  --card-bg: rgba(255, 252, 240, 0.78);
+  --card-border: rgba(217, 119, 6, 0.22);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-top);
+  color: var(--ink);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Header & Glass Nav */
+.top-nav {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(94%, 1120px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4ea2, #072f63);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(11, 78, 162, 0.35);
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.5px;
+  border: 2px solid #fbbf24;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.brand-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nandini-blue);
+  font-weight: 600;
+}
+
+:root[data-theme="dark"] .brand-sub {
+  color: #60a5fa;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.nav-btn:hover {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: var(--saffron);
+  transform: translateY(-1px);
+}
+
+.nav-btn.primary {
+  background: linear-gradient(135deg, #0b4ea2, #072f63);
+  color: #ffffff;
+  border: 1px solid #fbbf24;
+  box-shadow: 0 4px 14px rgba(11, 78, 162, 0.3);
+}
+
+.nav-btn.primary:hover {
+  background: linear-gradient(135deg, #1062cd, #0b4ea2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(11, 78, 162, 0.4);
+}
+
+/* Scrollytelling Hero Area */
+.hero {
+  position: relative;
+  height: 420vh;
+}
+
+.stage {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  min-height: 520px;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(60, 30, 5, 0.28) 100%),
+              url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .22 0 0 0 0 .08 0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.4'/></svg>");
+}
+
+/* Copy Header */
+.copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.kannada-tag {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+  letter-spacing: 0.16em;
+  color: var(--nandini-blue);
+  background: rgba(255, 255, 255, 0.65);
+  padding: 4px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 78, 162, 0.25);
+  backdrop-filter: blur(8px);
+  margin-bottom: 12px;
+  animation: in 1.4s ease-out both;
+}
+
+:root[data-theme="dark"] .kannada-tag {
+  background: rgba(11, 78, 162, 0.3);
+  color: #93c5fd;
+  border-color: rgba(147, 197, 253, 0.3);
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 7.5vw, 5.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-shadow: 0 2px 35px rgba(var(--glow-rgb), 0.95);
+  animation: in 1.5s ease-out both;
+}
+
+.sub {
+  margin: 1.2rem 0 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.3vw, 1.65rem);
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  animation: in 1.5s 0.4s ease-out both;
+}
+
+.sub-meta {
+  margin-top: 10px;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.85;
+  animation: in 1.5s 0.7s ease-out both;
+}
+
+/* Scroll Hint */
+.hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-soft);
+  font: 600 0.78rem/1 'Outfit', sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hint i {
+  width: 2px;
+  height: 36px;
+  background: linear-gradient(to bottom, var(--saffron), transparent);
+  border-radius: 2px;
+  transform-origin: top;
+  animation: drip 1.8s ease-in-out infinite;
+}
+
+@keyframes in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes drip {
+  0% { transform: scaleY(0); }
+  60% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1, .sub, .hint i, .kannada-tag, .sub-meta { animation: none; }
+}
+
+/* Dynamic Scrollytelling Tags */
+.tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+  opacity: 0;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  transition: opacity 0.15s ease;
+}
+
+.tag-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  padding: 10px 18px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tag-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--saffron-deep);
+  margin-bottom: 2px;
+}
+
+.tag-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.tag-desc {
+  font-size: clamp(0.75rem, 1.3vw, 0.86rem);
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-top: 3px;
+  white-space: normal;
+  max-width: 240px;
+}
+
+.tag b {
+  display: block;
+  height: 2px;
+  width: var(--lead, 0);
+  background: linear-gradient(90deg, var(--saffron), transparent);
+  border-radius: 2px;
+}
+
+.tag.reverse b {
+  background: linear-gradient(270deg, var(--saffron), transparent);
+}
+
+/* Side Rail Navigation */
+.rail {
+  position: absolute;
+  left: max(16px, env(safe-area-inset-left, 16px));
+  top: 50%;
+  height: 38vh;
+  transform: translateY(-50%);
+  width: 24px;
+  z-index: 50;
+}
+
+.rail::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: rgba(var(--glow-rgb), 0.45);
+}
+
+.fill {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(to top, var(--nandini-blue), var(--saffron));
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.rail button {
+  position: absolute;
+  left: 5px;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--saffron-deep);
+  background: var(--bg-top);
+  cursor: pointer;
+  transform: translateY(50%);
+  transition: all 0.2s ease;
+}
+
+.rail button:hover {
+  transform: translateY(50%) scale(1.3);
+  border-color: var(--nandini-blue);
+}
+
+.rail button.on {
+  background: var(--saffron);
+  border-color: var(--nandini-blue);
+  box-shadow: 0 0 10px var(--saffron);
+}
+
+.rail button:focus-visible, .end button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* End Finale Card */
+.end {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(3.5vh + 6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  z-index: 60;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.end-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  padding: 20px 28px;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(90%, 460px);
+}
+
+.end strong {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.end small {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.end-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-btn.secondary {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+.action-btn.secondary:hover {
+  background: var(--ink);
+  color: var(--bg-top);
+  transform: translateY(-2px);
+}
+
+.action-btn.primary {
+  border: 1.5px solid #fbbf24;
+  background: linear-gradient(135deg, #0b4ea2, #072f63);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(11, 78, 162, 0.35);
+}
+
+.action-btn.primary:hover {
+  background: linear-gradient(135deg, #1266d6, #0b4ea2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(11, 78, 162, 0.45);
+}
+
+/* Nutrition Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  background: var(--bg-top);
+  color: var(--ink);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 30px;
+  width: min(92%, 480px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.open .modal-box {
+  transform: scale(1);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.modal-head h3 {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ink-soft);
+  line-height: 1;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.nutri-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.nutri-val {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--nandini-blue);
+}
+
+:root[data-theme="dark"] .nutri-val {
+  color: #60a5fa;
+}
+
+.nutri-lbl {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+
+/* Sound indicator / Tap helper */
+.tap-hint {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 40;
+}
+
+.tap-hint.show {
+  opacity: 1;
+}
+
+/* Footer Story Strip */
+.heritage-bar {
+  background: linear-gradient(135deg, #0b4ea2, #072f63);
+  color: #fff;
+  padding: 40px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 30;
+  border-top: 3px solid #fbbf24;
+}
+
+.heritage-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heritage-inner h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  margin: 0 0 10px;
+  color: #fbbf24;
+}
+
+.heritage-inner p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0 0 20px;
+}
+
+.badges-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Header -->
+<header class="top-nav" role="banner">
+  <a href="#" class="brand-wrap" aria-label="Nandini KMF Badam Milk Home">
+    <div class="brand-badge" aria-hidden="true">KMF</div>
+    <div class="brand-text">
+      <span class="brand-name">NANDINI</span>
+      <span class="brand-sub">ಬಾದಾಮ್ ಹಾಲು · Badam Milk</span>
+    </div>
+  </a>
+  <div class="nav-actions">
+    <button class="nav-btn" id="soundToggle" aria-label="Toggle Sound" title="Toggle Sound">
+      <span id="soundIcon">🔊</span> <span id="soundText" style="display:none">Sound</span>
+    </button>
+    <button class="nav-btn" id="themeToggle" aria-label="Toggle Theme" title="Toggle Theme">
+      <span id="themeIcon">☀️</span>
+    </button>
+    <button class="nav-btn primary" id="openNutri">
+      <span>Nutrition</span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="stage" id="stage">
+    <canvas id="c" aria-label="Nandini Badam Milk bottle assembling from swirling golden saffron milk and real almonds" role="img"></canvas>
+    
+    <div class="tap-hint" id="tapHint">✨ Tap bottle for a badam milk splash!</div>
+
+    <div class="copy" id="copy">
+      <span class="kannada-tag">ಕರ್ನಾಟಕದ ಹೆಮ್ಮೆ · KMF NANDINI</span>
+      <h1>Nandini Badam Milk</h1>
+      <p class="sub">Royal Saffron · Crunchy Almonds · 100% Pure Milk</p>
+      <div class="sub-meta">A Quality Product of Karnataka Milk Federation</div>
+    </div>
+
+    <div class="hint" id="hint"><span>Scroll to assemble</span><i></i></div>
+
+    <!-- Scrollytelling Interactive Moments -->
+    <div class="tag" data-at=".54" data-side="-1" data-y="-.22">
+      <div class="tag-card">
+        <span class="tag-badge">Pure Infusion</span>
+        <div class="tag-title">Kashmiri Kesar</div>
+        <div class="tag-desc">Real royal saffron strands for rich aroma & natural golden radiance.</div>
+      </div>
+      <b></b>
+    </div>
+
+    <div class="tag reverse" data-at=".70" data-side="1" data-y=".02">
+      <b></b>
+      <div class="tag-card">
+        <span class="tag-badge">Crunchy Bites</span>
+        <div class="tag-title">Real Almonds</div>
+        <div class="tag-desc">Finely sliced badam slivers that give you a crunchy, wholesome bite in every sip.</div>
+      </div>
+    </div>
+
+    <div class="tag" data-at=".85" data-side="-1" data-y=".24">
+      <div class="tag-card">
+        <span class="tag-badge">Dairy Purity</span>
+        <div class="tag-title">100% Pure Milk</div>
+        <div class="tag-desc">Sourced fresh daily from millions of proud Karnataka dairy cooperative farmers.</div>
+      </div>
+      <b></b>
+    </div>
+
+    <!-- Progress Rail -->
+    <nav class="rail" aria-label="Jump to a moment">
+      <div class="fill" id="fill"></div>
+      <button style="bottom:0" data-p="0" aria-label="Start"></button>
+      <button style="bottom:58%" data-p=".58" aria-label="Kashmiri Kesar"></button>
+      <button style="bottom:74%" data-p=".74" aria-label="Real Almonds"></button>
+      <button style="bottom:90%" data-p=".90" aria-label="Pure Milk"></button>
+    </nav>
+
+    <!-- Finale Callout -->
+    <div class="end" id="end">
+      <div class="end-card">
+        <strong>Best Served Chilled.</strong>
+        <small>Shake well before use · Tap the bottle anytime for a splash!</small>
+        <div class="end-actions">
+          <button id="replay" class="action-btn secondary" type="button">↻ Replay</button>
+          <button id="openNutriEnd" class="action-btn primary" type="button">Nutrition Facts</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Heritage Banner -->
+<section class="heritage-bar">
+  <div class="heritage-inner">
+    <h2>The Taste of Karnataka</h2>
+    <p>For over five decades, Nandini by KMF has delivered unmatched purity, health, and authentic royal taste to millions of households. Prepared from pasteurized homogenized toned cow milk with real badam and cardamom.</p>
+    <div class="badges-row">
+      <div class="badge-item">🥛 100% Fresh Cow Milk</div>
+      <div class="badge-item">🌰 Real Badam Pieces</div>
+      <div class="badge-item">👑 Kashmiri Saffron</div>
+      <div class="badge-item">❄️ No Preservatives</div>
+    </div>
+  </div>
+</section>
+
+<!-- Nutrition Modal -->
+<div class="modal-backdrop" id="nutriModal" role="dialog" aria-modal="true" aria-labelledby="nutriTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="nutriTitle">Nutritional Value (Per 200ml)</h3>
+      <button class="modal-close" id="closeNutri" aria-label="Close modal">&times;</button>
+    </div>
+    <p style="font-size:0.85rem; color:var(--ink-soft); margin:0 0 14px;">
+      Nandini Badam Flavoured Milk is a rich source of calcium, dietary protein, and essential natural vitamins.
+    </p>
+    <div class="nutrition-grid">
+      <div class="nutri-item">
+        <div class="nutri-val">174 kcal</div>
+        <div class="nutri-lbl">Energy</div>
+      </div>
+      <div class="nutri-item">
+        <div class="nutri-val">6.4 g</div>
+        <div class="nutri-lbl">Protein</div>
+      </div>
+      <div class="nutri-item">
+        <div class="nutri-val">230 mg</div>
+        <div class="nutri-lbl">Calcium</div>
+      </div>
+      <div class="nutri-item">
+        <div class="nutri-val">6.0 g</div>
+        <div class="nutri-lbl">Milk Fat</div>
+      </div>
+      <div class="nutri-item">
+        <div class="nutri-val">Real Badam</div>
+        <div class="nutri-lbl">Almond Flakes</div>
+      </div>
+      <div class="nutri-item">
+        <div class="nutri-val">Elaichi & Kesar</div>
+        <div class="nutri-lbl">Natural Flavours</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+      <button class="action-btn primary" id="closeNutriBtn" style="padding:0.6rem 1.8rem; font-size:0.88rem;">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* --------------------------------------------------------------------------
+   NANDINI BADAM MILK - Procedural 3D Scrollytelling Engine
+   Featuring: Saffron-Milk Swirl Ribbons, 200ml Glass Bottle with KMF Nandini
+   Bilingual branding, Drifting Almond Slivers, Saffron Pistils & Interactive Splash!
+   -------------------------------------------------------------------------- */
+const SEQUENCE = { enabled: false, count: 120, src: i => `frames/frame_${String(i+1).padStart(4,'0')}.jpg` };
+
+const $ = id => document.getElementById(id);
+const hero = $('hero'), stage = $('stage'), canvas = $('c'), ctx = canvas.getContext('2d');
+const copy = $('copy'), hint = $('hint'), tapHint = $('tapHint');
+const cs = getComputedStyle(document.documentElement), tok = n => cs.getPropertyValue(n).trim();
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const ss = (a, b, v) => { const x = clamp((v - a) / (b - a)); return x * x * (3 - 2 * x); };
+const rng = s => () => (s = (s * 16807) % 2147483647) / 2147483647;
+
+let W = 0, H = 0, cx = 0, cy = 0, bhG = 0, px = 0, py = 0, tx = 0, ty = 0;
+let soundEnabled = false;
+
+/* Optional Audio Clink & Splash Synthesizer (Web Audio API) */
+let audioCtx = null;
+function playClink() {
+  if (!soundEnabled) return;
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    
+    // Glass clink overtone
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(1850, audioCtx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.35);
+    
+    gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
+    
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.36);
+  } catch(e) {}
+}
+
+function playSplashSound() {
+  if (!soundEnabled) return;
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    
+    const bufferSize = audioCtx.sampleRate * 0.25;
+    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (audioCtx.sampleRate * 0.05));
+    }
+    const noise = audioCtx.createBufferSource();
+    noise.buffer = buffer;
+    
+    const filter = audioCtx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.value = 750;
+    filter.Q.value = 3;
+    
+    const gain = audioCtx.createGain();
+    gain.gain.setValueAtTime(0.28, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.005, audioCtx.currentTime + 0.25);
+    
+    noise.connect(filter);
+    filter.connect(gain);
+    gain.connect(audioCtx.destination);
+    noise.start();
+  } catch(e) {}
+}
+
+/* Sound toggle handler */
+$('soundToggle').onclick = () => {
+  soundEnabled = !soundEnabled;
+  $('soundIcon').textContent = soundEnabled ? '🔊' : '🔇';
+  if (soundEnabled) playClink();
+};
+
+/* Theme toggle handler */
+const themeToggle = $('themeToggle');
+const rootEl = document.documentElement;
+themeToggle.onclick = () => {
+  const current = rootEl.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const next = current === 'dark' ? 'light' : 'dark';
+  rootEl.setAttribute('data-theme', next);
+  $('themeIcon').textContent = next === 'dark' ? '🌙' : '☀️';
+};
+
+/* Nutrition modal handlers */
+const nutriModal = $('nutriModal');
+const openModal = () => nutriModal.classList.add('open');
+const closeModal = () => nutriModal.classList.remove('open');
+$('openNutri').onclick = openModal;
+$('openNutriEnd').onclick = openModal;
+$('closeNutri').onclick = closeModal;
+$('closeNutriBtn').onclick = closeModal;
+nutriModal.onclick = e => { if (e.target === nutriModal) closeModal(); };
+
+/* Image sequence fallback */
+const imgs = []; let seqOK = false;
+if (SEQUENCE.enabled) {
+  let n = 0;
+  for (let i = 0; i < SEQUENCE.count; i++) {
+    const im = new Image();
+    im.onload = () => { if (++n === SEQUENCE.count) seqOK = true; };
+    im.src = SEQUENCE.src(i);
+    imgs.push(im);
+  }
+}
+
+function resize() {
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  const r = canvas.getBoundingClientRect();
+  W = r.width;
+  H = r.height;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  cx = W / 2;
+  cy = H * 0.47;
+  bhG = Math.min(H * 0.62, W * 1.02);
+}
+addEventListener('resize', resize);
+
+/* --------------------------------------------------------------------------
+   Procedural Scene Data: Saffron Ribbons, Almond Bits, Saffron Threads
+   -------------------------------------------------------------------------- */
+const ribbons = Array.from({ length: 6 }, (_, k) => ({
+  th: (k % 2 ? 0 : Math.PI) + ((k >> 1) - 1) * 0.75,
+  turns: 1.18 + 0.12 * k,
+  w: 0.95 + 0.1 * (k % 3)
+}));
+
+// Condensation droplets on bottle
+const drops = (() => {
+  const r = rng(18);
+  return Array.from({ length: 75 }, () => ({
+    x: (r() * 2 - 1) * 16.5,
+    y: -14 + r() * 60,
+    s: 0.35 + r() * r() * 1.35
+  }));
+})();
+
+// Floating badam milk sparks and golden aura particles
+const parts = (() => {
+  const r = rng(101);
+  return Array.from({ length: 34 }, () => ({
+    a: r() * 6.283,
+    r: 0.3 + r() * 0.52,
+    s: 2 + r() * 5,
+    sp: (r() - 0.5) * 0.00045,
+    ph: r() * 6.283
+  }));
+})();
+
+/* Swirling Saffron-Badam Milk Ribbon */
+function ribbon(r, k, head, alpha, t) {
+  const Rmax = Math.max(W, H) * 0.64;
+  const N = 46;
+  const base = Math.min(W, H) * 0.052 * r.w;
+  const tail = Math.max(0, head - 0.54);
+  ctx.lineCap = 'round';
+  let prev = null;
+  
+  for (let i = 0; i <= N; i++) {
+    const u = i / N;
+    const s = tail + (head - tail) * u;
+    const rad = Rmax * Math.pow(1 - s, 1.15) * (1 + 0.05 * Math.sin(s * 10 + k + t * 0.0008));
+    const a = r.th + s * r.turns * Math.PI * 2;
+    const x = cx + Math.cos(a) * rad;
+    const y = cy + Math.sin(a) * rad * 0.62;
+    
+    if (prev) {
+      const w = base * (0.22 + 0.78 * Math.sin(Math.PI * u)) * (0.35 + 0.65 * (1 - s));
+      const seg = (col, lw, dy) => {
+        ctx.strokeStyle = col;
+        ctx.lineWidth = lw;
+        ctx.beginPath();
+        ctx.moveTo(prev.x, prev.y + dy);
+        ctx.lineTo(x, y + dy);
+        ctx.stroke();
+      };
+      
+      // Saffron outer glow
+      seg(`rgba(230, 135, 15, ${alpha * 0.45})`, w * 1.25, 0);
+      // Creamy badam milk body
+      seg(`rgba(255, 225, 145, ${alpha * 0.95})`, w, 0);
+      // Pure cream specular glint
+      seg(`rgba(255, 255, 245, ${alpha * 0.75})`, w * 0.32, -w * 0.18);
+    }
+    prev = { x, y };
+  }
+}
+
+/* Helper: text scaling */
+function txt(s, x, y, size, weight, font = 'Cinzel, Georgia, serif') {
+  ctx.save();
+  ctx.scale(0.1, 0.1);
+  ctx.font = `${weight} ${size * 10}px ${font}`;
+  ctx.textAlign = 'center';
+  ctx.fillText(s, x * 10, y * 10);
+  ctx.restore();
+}
+
+/* 200ml Nandini Badam Milk Glass Bottle Outline */
+function bottlePath() {
+  ctx.beginPath();
+  // Crown rim
+  ctx.moveTo(-6, -44);
+  ctx.lineTo(6, -44);
+  // Upper neck collar
+  ctx.lineTo(6, -34);
+  ctx.quadraticCurveTo(6.8, -32, 7.5, -30);
+  // Shoulder flare
+  ctx.bezierCurveTo(9, -24, 18.5, -23, 18.5, -12);
+  // Cylindrical body
+  ctx.lineTo(18.5, 42);
+  // Heavy glass bottom
+  ctx.quadraticCurveTo(18.5, 51, 10, 51);
+  ctx.lineTo(-10, 51);
+  ctx.quadraticCurveTo(-18.5, 51, -18.5, 42);
+  ctx.lineTo(-18.5, -12);
+  // Left shoulder & neck
+  ctx.bezierCurveTo(-18.5, -23, -9, -24, -7.5, -30);
+  ctx.quadraticCurveTo(-6.8, -32, -6, -34);
+  ctx.closePath();
+}
+
+/* Draw Nandini Badam Milk Bottle */
+function drawBottle(p) {
+  /* Floor Contact Shadow */
+  ctx.save();
+  ctx.translate(0, 51);
+  ctx.scale(1, 0.2);
+  const sg = ctx.createRadialGradient(0, 0, 0, 0, 0, 32);
+  sg.addColorStop(0, 'rgba(65, 32, 5, 0.42)');
+  sg.addColorStop(0.5, 'rgba(65, 32, 5, 0.2)');
+  sg.addColorStop(1, 'rgba(65, 32, 5, 0)');
+  ctx.fillStyle = sg;
+  ctx.beginPath();
+  ctx.arc(0, 0, 32, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  /* Liquid Badam Milk Body (Golden Saffron with rich depth) */
+  const lg = ctx.createLinearGradient(-18.5, 0, 18.5, 0);
+  lg.addColorStop(0, '#e5951a');
+  lg.addColorStop(0.25, '#fed778');
+  lg.addColorStop(0.55, '#ffe9a0');
+  lg.addColorStop(0.85, '#f7b832');
+  lg.addColorStop(1, '#c97708');
+  bottlePath();
+  ctx.fillStyle = lg;
+  ctx.fill();
+
+  /* Internal clipping for liquid elements, label & condensation */
+  ctx.save();
+  bottlePath();
+  ctx.clip();
+
+  // Suspended crushed badam specks inside liquid
+  ctx.fillStyle = 'rgba(120, 55, 10, 0.4)';
+  const dotR = rng(42);
+  for (let i = 0; i < 35; i++) {
+    const bx = -15 + dotR() * 30;
+    const by = -28 + dotR() * 72;
+    const br = 0.25 + dotR() * 0.45;
+    ctx.beginPath();
+    ctx.arc(bx, by, br, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  /* --------------------------------------------------------
+     The Authentic KMF NANDINI BADAM MILK Label
+     -------------------------------------------------------- */
+  // Label background card (Ivory / warm cream with gold borders)
+  const lblY = -10, lblH = 43;
+  const labelBg = ctx.createLinearGradient(0, lblY, 0, lblY + lblH);
+  labelBg.addColorStop(0, '#ffffff');
+  labelBg.addColorStop(0.5, '#fffdf5');
+  labelBg.addColorStop(1, '#fff6de');
+  ctx.fillStyle = labelBg;
+  ctx.fillRect(-18.5, lblY, 37, lblH);
+
+  // Gold accent borders
+  ctx.fillStyle = '#fbbf24';
+  ctx.fillRect(-18.5, lblY, 37, 1.2);
+  ctx.fillRect(-18.5, lblY + lblH - 1.2, 37, 1.2);
+
+  // Signature KMF Nandini Royal Blue Banner at top of label
+  const blueBanner = ctx.createLinearGradient(0, lblY + 1.2, 0, lblY + 11.5);
+  blueBanner.addColorStop(0, '#0b4ea2');
+  blueBanner.addColorStop(1, '#072f63');
+  ctx.fillStyle = blueBanner;
+  ctx.fillRect(-18.5, lblY + 1.2, 37, 10.5);
+
+  // KMF White Cow Silhouette / Emblem inside the blue banner
+  ctx.fillStyle = '#ffffff';
+  ctx.beginPath();
+  // Cow body stylized emblem
+  ctx.ellipse(-10.5, lblY + 6.2, 2.8, 1.8, 0, 0, Math.PI * 2);
+  ctx.fill();
+  // Cow head & ear
+  ctx.beginPath();
+  ctx.arc(-13, lblY + 5.2, 1.2, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Bilingual Nandini Branding
+  // Kannada: "ನಂದಿನಿ"
+  ctx.fillStyle = '#fbbf24';
+  txt('ನಂದಿನಿ', 3, lblY + 5.6, 3.1, 700, 'Outfit, sans-serif');
+
+  // English: "NANDINI"
+  ctx.fillStyle = '#ffffff';
+  txt('NANDINI', 3, lblY + 9.8, 3.4, 800, 'Cinzel, Georgia, serif');
+
+  // Label Centerpiece: "BADAM"
+  ctx.fillStyle = '#b45309';
+  txt('FLAVOURED MILK', 0, lblY + 15.5, 2.1, 700, 'Outfit, sans-serif');
+
+  // Bold BADAM MILK banner
+  const badamGrad = ctx.createLinearGradient(0, lblY + 17, 0, lblY + 24);
+  badamGrad.addColorStop(0, '#d97706');
+  badamGrad.addColorStop(1, '#92400e');
+  ctx.fillStyle = badamGrad;
+  txt('BADAM', 0, lblY + 23.5, 6.2, 900, 'Cinzel, Georgia, serif');
+
+  // Saffron banner ribbon
+  ctx.fillStyle = '#f59e0b';
+  ctx.beginPath();
+  ctx.roundRect ? ctx.roundRect(-14, lblY + 26, 28, 4.2, 2) : ctx.rect(-14, lblY + 26, 28, 4.2);
+  ctx.fill();
+
+  ctx.fillStyle = '#ffffff';
+  txt('WITH REAL ALMONDS', 0, lblY + 29.2, 1.9, 800, 'Outfit, sans-serif');
+
+  // Realistic Almond & Saffron motif drawn on the label
+  // Almond 1
+  ctx.save();
+  ctx.translate(-3.5, lblY + 36);
+  ctx.rotate(-0.35);
+  ctx.fillStyle = '#854d0e';
+  ctx.beginPath();
+  ctx.ellipse(0, 0, 3.8, 2.2, 0, 0, Math.PI * 2);
+  ctx.fill();
+  // Almond inner texture
+  ctx.fillStyle = '#fed7aa';
+  ctx.beginPath();
+  ctx.ellipse(0.3, 0, 2.9, 1.5, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  // Almond 2 (overlapping)
+  ctx.save();
+  ctx.translate(3.5, lblY + 36.5);
+  ctx.rotate(0.4);
+  ctx.fillStyle = '#78350f';
+  ctx.beginPath();
+  ctx.ellipse(0, 0, 3.6, 2.1, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#ffedd5';
+  ctx.beginPath();
+  ctx.ellipse(0.2, 0, 2.7, 1.4, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  // Red Saffron Threads across the almonds
+  ctx.strokeStyle = '#dc2626';
+  ctx.lineWidth = 0.5;
+  ctx.beginPath();
+  ctx.moveTo(-7, lblY + 35);
+  ctx.quadraticCurveTo(-1, lblY + 32, 5, lblY + 35);
+  ctx.moveTo(-4, lblY + 37);
+  ctx.quadraticCurveTo(1, lblY + 39, 7, lblY + 34);
+  ctx.stroke();
+
+  // Bottom seal
+  ctx.fillStyle = '#6b7280';
+  txt('SERVE CHILLED · 200 ml', 0, lblY + 41.5, 1.6, 600, 'Outfit, sans-serif');
+
+  /* Glass Reflections & Specular Highlights */
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
+  ctx.fillRect(-14.5 + px * 3.5, -28, 2.8, 76);
+
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+  ctx.fillRect(11.5, -28, 1.6, 76);
+
+  /* Frosty Condensation Beads */
+  const n = Math.floor(drops.length * ss(0.62, 0.98, p));
+  ctx.lineWidth = 0.2;
+  for (let i = 0; i < n; i++) {
+    const d = drops[i];
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.28)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.65)';
+    ctx.beginPath();
+    ctx.arc(d.x, d.y, d.s, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    // Specular droplet glint
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+    ctx.beginPath();
+    ctx.arc(d.x - d.s * 0.3, d.y - d.s * 0.3, d.s * 0.26, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  ctx.restore(); // end clip
+
+  // Bottle Outer Glass Outline & Rim Refraction
+  bottlePath();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+  ctx.lineWidth = 0.65;
+  ctx.stroke();
+
+  /* --------------------------------------------------------
+     Nandini Royal Blue Metallic Crown / Twist Cap
+     -------------------------------------------------------- */
+  const capGrad = ctx.createLinearGradient(-7.5, 0, 7.5, 0);
+  capGrad.addColorStop(0, '#072f63');
+  capGrad.addColorStop(0.25, '#1e5bb0');
+  capGrad.addColorStop(0.55, '#3b82f6');
+  capGrad.addColorStop(0.85, '#0b4ea2');
+  capGrad.addColorStop(1, '#052249');
+  ctx.fillStyle = capGrad;
+  ctx.beginPath();
+  ctx.roundRect ? ctx.roundRect(-7.5, -51, 15, 7.5, 1.5) : ctx.rect(-7.5, -51, 15, 7.5);
+  ctx.fill();
+
+  // Cap rim specular highlight
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
+  ctx.fillRect(-5.5, -50, 1.8, 5.5);
+
+  // Gold emblem ring on cap
+  ctx.strokeStyle = '#fbbf24';
+  ctx.lineWidth = 0.5;
+  ctx.strokeRect(-6.5, -49.5, 13, 4.5);
+}
+
+/* --------------------------------------------------------------------------
+   Canvas Main Render Loop
+   -------------------------------------------------------------------------- */
+function draw(p, t) {
+  if (seqOK) {
+    const im = imgs[Math.round(p * (SEQUENCE.count - 1))];
+    const k = Math.max(W / im.width, H / im.height);
+    ctx.drawImage(im, cx - im.width * k / 2, cy - im.height * k / 2, im.width * k, im.height * k);
+    return;
+  }
+
+  const rgb = tok('--glow-rgb');
+  const bg = ctx.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, tok('--bg-top'));
+  bg.addColorStop(1, tok('--bg-bot'));
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Radiant Golden Saffron Ambient Light
+  const R = Math.max(W, H) * 0.58;
+  const gl = ctx.createRadialGradient(cx + px * W * 0.08, cy + py * H * 0.05, 0, cx, cy, R);
+  gl.addColorStop(0, `rgba(${rgb}, ${0.55 + 0.35 * p})`);
+  gl.addColorStop(0.7, `rgba(${rgb}, ${0.15 * (1 - p * 0.3)})`);
+  gl.addColorStop(1, `rgba(${rgb}, 0)`);
+  ctx.fillStyle = gl;
+  ctx.fillRect(0, 0, W, H);
+
+  const bh = bhG;
+  const u = bh / 100;
+
+  // Swirling Golden Milk Ribbons coalescing
+  const head = (x => x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2)(clamp(p / 0.54));
+  const ra = 1 - ss(0.52, 0.84, p);
+  if (head > 0.001 && ra > 0.01) {
+    ribbons.forEach((r, k) => ribbon(r, k, head, ra, t));
+  }
+
+  // Pool of creamy badam milk gathering in center
+  const bump = ss(0.28, 0.54, p) * (1 - ss(0.54, 0.82, p));
+  if (bump > 0.01) {
+    const pr = bh * 0.22 * bump;
+    const pg = ctx.createRadialGradient(cx, cy, 0, cx, cy, pr);
+    pg.addColorStop(0, 'rgba(255, 238, 180, 0.95)');
+    pg.addColorStop(0.6, 'rgba(245, 175, 45, 0.6)');
+    pg.addColorStop(1, 'rgba(245, 158, 11, 0)');
+    ctx.fillStyle = pg;
+    ctx.beginPath();
+    ctx.arc(cx, cy, pr, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Bottle Materialization & Settling
+  const b = ss(0.36, 0.72, p);
+  if (b > 0) {
+    const settle = 1 - Math.pow(1 - ss(0.38, 0.95, p), 3);
+    ctx.save();
+    ctx.globalAlpha = b;
+    ctx.translate(cx + px * bh * 0.03, cy + bh * 0.08 * (1 - settle) + py * bh * 0.015);
+    const sc = u * (0.82 + 0.18 * settle);
+    ctx.scale(sc, sc);
+    ctx.rotate(-0.08 * (1 - settle) + px * 0.05);
+    drawBottle(p);
+    ctx.restore();
+  }
+
+  // Floating Golden Sparkles & Suspended Cream Spheres
+  const vis = ss(0.48, 0.92, p);
+  const spread = 0.4 + 0.6 * ss(0.42, 0.95, p);
+  const ps = Math.max(0.65, Math.min(W, H) / 720);
+  if (vis > 0.01) {
+    parts.forEach(q => {
+      const a = q.a + t * q.sp;
+      const rr = bh * q.r * spread;
+      const x = cx + Math.cos(a) * rr * 0.85;
+      const y = cy + Math.sin(a) * rr * 0.7 + Math.sin(t * 0.0015 + q.ph) * 6;
+      const s = q.s * ps;
+      ctx.globalAlpha = vis;
+      ctx.fillStyle = 'rgba(251, 191, 36, 0.65)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.9)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(x, y, s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+      ctx.beginPath();
+      ctx.arc(x - s * 0.3, y - s * 0.3, s * 0.28, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+  ctx.globalAlpha = 1;
+}
+
+/* --------------------------------------------------------------------------
+   Almond Slivers (Badam Flakes) and Saffron Strands (Kesar Threads)
+   -------------------------------------------------------------------------- */
+const flakes = Array.from({ length: 24 }, (_, i) => {
+  const r = rng(55 + i * 11);
+  return {
+    type: i % 3 === 0 ? 'saffron' : 'almond', // 1/3 Saffron Threads, 2/3 Almond Slivers
+    x: r(),
+    y: r() * 950,
+    v: 0.035 + r() * 0.055,
+    z: 0.45 + r() * 0.85,
+    ph: r() * 6.28,
+    s: 6 + r() * 9,
+    rot: r() * 6.28,
+    curl: r() * 2 - 1
+  };
+});
+
+function drawBadamAndKesar(t, p) {
+  const vis = ss(0.25, 0.62, p);
+  if (vis < 0.01) return;
+  const tt = reduce ? 0 : t;
+
+  flakes.forEach(q => {
+    const y = ((q.y + tt * q.v * q.z) % (H + 90)) - 45;
+    const x = q.x * W + Math.sin(tt * 0.0006 + q.ph) * 36 * q.z + px * q.z * 30;
+    const s = q.s * q.z * Math.max(0.7, Math.min(W, H) / 800);
+
+    ctx.save();
+    ctx.globalAlpha = vis * 0.85;
+    ctx.translate(x, y);
+    ctx.rotate(q.rot + tt * 0.0006 * q.z + Math.sin(tt * 0.001 + q.ph) * 0.5);
+
+    if (q.type === 'almond') {
+      // 3D Tumble simulation
+      const wobble = Math.sin(tt * 0.0009 + q.ph);
+      ctx.scale(1, 0.45 + 0.55 * Math.abs(wobble));
+
+      // Roasted golden-brown outer skin
+      ctx.fillStyle = '#854d0e';
+      ctx.beginPath();
+      ctx.ellipse(0, 0, s, s * 0.55, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Creamy pale almond interior
+      ctx.fillStyle = '#fef3c7';
+      ctx.beginPath();
+      ctx.ellipse(s * 0.1, 0, s * 0.8, s * 0.4, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else {
+      // Royal Kashmiri Saffron Strand (Curving thread with flared stigma)
+      const sway = Math.sin(tt * 0.0012 + q.ph) * 4;
+      ctx.strokeStyle = '#dc2626';
+      ctx.lineWidth = Math.max(1, s * 0.16);
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(-s * 0.8, -s * 0.4);
+      ctx.quadraticCurveTo(0, sway, s * 0.8, s * 0.4);
+      ctx.stroke();
+
+      // Flared golden-red tip
+      ctx.fillStyle = '#b91c1c';
+      ctx.beginPath();
+      ctx.arc(s * 0.8, s * 0.4, s * 0.18, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.restore();
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Tap Splash & Ripple Physics
+   -------------------------------------------------------------------------- */
+const splash = [], rings = [];
+
+function triggerSplash(x, y) {
+  playSplashSound();
+  rings.push({ x, y, r: 4, l: 1 });
+  
+  // 36 rich golden badam milk droplets + crushed almond crumbs
+  for (let i = 0; i < 36; i++) {
+    const a = -Math.PI / 2 + (Math.random() - 0.5) * 2.8;
+    const s = 2.5 + Math.random() * 6.5;
+    const isCrumb = Math.random() > 0.7;
+    splash.push({
+      x, y,
+      vx: Math.cos(a) * s,
+      vy: Math.sin(a) * s,
+      r: isCrumb ? (1 + Math.random() * 2) : (1.6 + Math.random() * 3.6),
+      l: 1,
+      isCrumb
+    });
+  }
+}
+
+canvas.addEventListener('pointerdown', e => {
+  if (cur < 0.65) return;
+  const r = canvas.getBoundingClientRect();
+  const x = e.clientX - r.left;
+  const y = e.clientY - r.top;
+  if (Math.abs(x - cx) > bhG * 0.32 || Math.abs(y - cy) > bhG * 0.55) return;
+  triggerSplash(x, y);
+});
+
+function drawSplash() {
+  // Ripple shockwaves
+  rings.forEach(q => {
+    q.r += 3.8;
+    q.l -= 0.032;
+    ctx.strokeStyle = `rgba(255, 235, 170, ${Math.max(0, q.l) * 0.85})`;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2);
+    ctx.stroke();
+  });
+
+  // Droplets and badam crumbs
+  splash.forEach(q => {
+    q.vy += 0.22;
+    q.x += q.vx;
+    q.y += q.vy;
+    q.l -= 0.012;
+    ctx.globalAlpha = Math.max(0, q.l);
+    
+    if (q.isCrumb) {
+      // Golden almond crumb
+      ctx.fillStyle = '#92400e';
+      ctx.fillRect(q.x, q.y, q.r, q.r);
+    } else {
+      // Creamy badam milk droplet
+      ctx.fillStyle = 'rgba(254, 243, 199, 0.98)';
+      ctx.strokeStyle = 'rgba(245, 158, 11, 0.85)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+    }
+  });
+  ctx.globalAlpha = 1;
+
+  for (let i = rings.length; i--;) if (rings[i].l <= 0) rings.splice(i, 1);
+  for (let i = splash.length; i--;) if (splash[i].l <= 0) splash.splice(i, 1);
+}
+
+/* --------------------------------------------------------------------------
+   UI Scrollytelling & Tag Updates
+   -------------------------------------------------------------------------- */
+const $$ = q => [...document.querySelectorAll(q)];
+const tags = $$('.tag');
+const dots = $$('.rail button');
+const fill = $('fill');
+const end = $('end');
+
+const maxScroll = () => Math.max(1, document.documentElement.scrollHeight - innerHeight);
+const go = p => scrollTo({ top: p * maxScroll(), behavior: reduce ? 'auto' : 'smooth' });
+
+dots.forEach(d => d.onclick = () => {
+  playClink();
+  go(+d.dataset.p);
+});
+
+$('replay').onclick = () => {
+  playClink();
+  go(0);
+};
+
+addEventListener('pointermove', e => {
+  tx = (e.clientX / innerWidth) * 2 - 1;
+  ty = (e.clientY / innerHeight) * 2 - 1;
+});
+
+function updateUI(p) {
+  fill.style.transform = `scaleY(${p})`;
+  dots.forEach(d => d.classList.toggle('on', p >= +d.dataset.p - 0.04));
+
+  const off = bhG * 0.19 + (W < 700 ? 14 : 26);
+  const lead = W < 700 ? 0 : 58;
+
+  tags.forEach(t => {
+    const at = +t.dataset.at;
+    const side = +t.dataset.side;
+    const a = ss(at, at + 0.06, p);
+    t.style.opacity = a;
+    t.style.left = (cx + side * off) + 'px';
+    t.style.top = (cy + bhG * +t.dataset.y) + 'px';
+    t.style.transform = `translate(${side < 0 ? -100 : 0}%, -50%) translateX(${-side * (1 - a) * 16}px)`;
+    t.style.setProperty('--lead', lead * a + 'px');
+  });
+
+  const e = ss(0.93, 0.99, p);
+  end.style.opacity = e;
+  end.style.visibility = e > 0.02 ? 'visible' : 'hidden';
+
+  // Tap hint visibility when bottle is assembled
+  if (p > 0.72 && p < 0.94) {
+    tapHint.classList.add('show');
+  } else {
+    tapHint.classList.remove('show');
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Smooth Animation Loop
+   -------------------------------------------------------------------------- */
+let cur = 0;
+function frame(now) {
+  const target = clamp(scrollY / maxScroll());
+  if (!reduce) {
+    px += (tx - px) * 0.08;
+    py += (ty - py) * 0.08;
+  }
+  cur += (target - cur) * (reduce ? 1 : 0.12);
+  if (Math.abs(target - cur) < 0.0004) cur = target;
+
+  draw(cur, now);
+  drawBadamAndKesar(now, cur);
+  drawSplash();
+  updateUI(cur);
+
+  // Hero Copy Fade out smoothly during initial scroll
+  const o = 1 - ss(0, 0.32, cur);
+  copy.style.opacity = o;
+  copy.style.transform = `translateY(${-cur * 70}px) scale(${1 + cur * 0.04})`;
+  hint.style.opacity = 1 - ss(0, 0.06, cur);
+
+  requestAnimationFrame(frame);
+}
+
+resize();
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
