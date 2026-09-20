@@ -7,6 +7,7 @@ const Scene = dynamic(
   () => import("@/components/canvas/Scene").then((mod) => mod.Scene),
   { ssr: false }
 );
+import { CanvasErrorBoundary } from "@/components/canvas/CanvasErrorBoundary";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { SensesModeToggle } from "@/components/ui/SensesModeToggle";
 import { ChillFactorSlider } from "@/components/ui/ChillFactorSlider";
@@ -110,16 +111,18 @@ export default function NandiniBadamExperience() {
       </header>
 
       {/* 3. 3D WebGL Scene Stage */}
-      <Scene
-        scrollProgress={scrollProgress}
-        chillFactor={chillFactor}
-        tilt={gyro}
-        sensesMode={sensesMode}
-        isUncapped={isUncapped}
-        onUncap={() => setIsUncapped(true)}
-        gpuProfile={gpuProfile}
-        isReducedMotion={isReducedMotion}
-      />
+      <CanvasErrorBoundary>
+        <Scene
+          scrollProgress={scrollProgress}
+          chillFactor={chillFactor}
+          tilt={gyro}
+          sensesMode={sensesMode}
+          isUncapped={isUncapped}
+          onUncap={() => setIsUncapped(true)}
+          gpuProfile={gpuProfile}
+          isReducedMotion={isReducedMotion}
+        />
+      </CanvasErrorBoundary>
 
       {/* 4. Hero Section Copy (Sticky during 0% - 25% scroll) */}
       <section className="relative z-20 h-screen flex flex-col items-center justify-center text-center px-4 pointer-events-none">
