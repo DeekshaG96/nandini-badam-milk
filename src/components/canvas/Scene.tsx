@@ -13,6 +13,7 @@ interface SceneProps {
   chillFactor: number;
   tilt: { tiltX: number; tiltY: number };
   sensesMode: "morning" | "golden-hour";
+  isDark?: boolean;
   isUncapped: boolean;
   onUncap: () => void;
   gpuProfile: GPUPerformanceProfile;
@@ -24,6 +25,7 @@ export function Scene({
   chillFactor,
   tilt,
   sensesMode,
+  isDark = false,
   isUncapped,
   onUncap,
   gpuProfile,
@@ -38,6 +40,7 @@ export function Scene({
     chillFactor,
     tilt,
     sensesMode,
+    isDark,
     isUncapped,
     isReducedMotion,
     onUncap,
@@ -49,11 +52,12 @@ export function Scene({
       chillFactor,
       tilt,
       sensesMode,
+      isDark,
       isUncapped,
       isReducedMotion,
       onUncap,
     };
-  }, [scrollProgress, chillFactor, tilt, sensesMode, isUncapped, isReducedMotion, onUncap]);
+  }, [scrollProgress, chillFactor, tilt, sensesMode, isDark, isUncapped, isReducedMotion, onUncap]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -421,15 +425,32 @@ export function Scene({
         chillFactor: chill,
         tilt: gyroTilt,
         sensesMode: mode,
+        isDark: dark,
         isUncapped: uncapped,
         isReducedMotion: reduced,
       } = propsRef.current;
 
-      // Update Lighting based on Senses Mode
+      // Update Lighting based on Senses Mode & Dark Mode
       const isGolden = mode === "golden-hour";
-      ambientLight.intensity = isGolden ? 0.7 : 0.95;
-      keyLight.color.set(isGolden ? "#FDE68A" : "#FFFFFF");
-      rimLight.color.set(isGolden ? "#F59E0B" : "#0B4EA2");
+      if (dark) {
+        ambientLight.intensity = 0.55;
+        ambientLight.color.set("#FFE4B5");
+        keyLight.intensity = 2.4;
+        keyLight.color.set(isGolden ? "#FBBF24" : "#FDE68A");
+        rimLight.intensity = 1.8;
+        rimLight.color.set(isGolden ? "#F59E0B" : "#60A5FA");
+        pointLight.intensity = 1.0;
+        pointLight.color.set("#F59E0B");
+      } else {
+        ambientLight.intensity = isGolden ? 0.7 : 0.95;
+        ambientLight.color.set(0xfffdf5);
+        keyLight.intensity = 1.8;
+        keyLight.color.set(isGolden ? "#FDE68A" : "#FFFFFF");
+        rimLight.intensity = 1.1;
+        rimLight.color.set(isGolden ? "#F59E0B" : "#0B4EA2");
+        pointLight.intensity = 0.6;
+        pointLight.color.set(0xfbbf24);
+      }
 
       // Update Uniforms
       glassShaderMaterial.uniforms.u_time.value = t;

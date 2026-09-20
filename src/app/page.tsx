@@ -28,6 +28,7 @@ export default function NandiniBadamExperience() {
   const [chillFactor, setChillFactor] = useState(0.0); // 0.0 = 4°C, 1.0 = 60°C
   const [sensesMode, setSensesMode] = useState<"morning" | "golden-hour">("morning");
   const [isUncapped, setIsUncapped] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
 
@@ -95,7 +96,12 @@ export default function NandiniBadamExperience() {
 
         <div className="flex items-center gap-2.5 sm:gap-3.5">
           <LanguageToggle language={lang} onToggle={setLang} />
-          <SensesModeToggle sensesMode={sensesMode} onSensesToggle={setSensesMode} />
+          <SensesModeToggle
+            sensesMode={sensesMode}
+            onSensesToggle={setSensesMode}
+            isDark={isDark}
+            onToggleDark={setIsDark}
+          />
           <button
             type="button"
             onClick={() => {
@@ -117,6 +123,7 @@ export default function NandiniBadamExperience() {
           chillFactor={chillFactor}
           tilt={gyro}
           sensesMode={sensesMode}
+          isDark={isDark}
           isUncapped={isUncapped}
           onUncap={() => setIsUncapped((prev) => !prev)}
           gpuProfile={gpuProfile}
