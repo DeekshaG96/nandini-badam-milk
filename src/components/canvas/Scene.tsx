@@ -82,15 +82,16 @@ export function Scene({
       return;
     }
 
-    // 2. Camera & Scene
+    // 2. Camera & Scene with Responsive Golden-Ratio Framing
     const scene = new THREE.Scene();
+    const isMobile = window.innerWidth < 768;
     const camera = new THREE.PerspectiveCamera(
       44,
       window.innerWidth / window.innerHeight,
       0.1,
       50
     );
-    camera.position.set(0, 0.2, 5.8);
+    camera.position.set(0, isMobile ? 0.0 : -0.1, isMobile ? 6.8 : 5.6);
 
     // 3. Dynamic Studio Lighting
     const ambientLight = new THREE.AmbientLight(0xfffdf5, 0.9);
@@ -403,9 +404,12 @@ export function Scene({
       if (!renderer) return;
       const width = window.innerWidth;
       const height = window.innerHeight;
+      const mobile = width < 768;
       camera.aspect = width / height;
+      camera.position.set(0, mobile ? 0.0 : -0.1, mobile ? 6.8 : 5.6);
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
+      bottleGroup.scale.set(mobile ? 1.1 : 1.25, mobile ? 1.1 : 1.25, mobile ? 1.1 : 1.25);
     };
     window.addEventListener("resize", handleResize);
 
@@ -463,8 +467,25 @@ export function Scene({
       steamMaterial.uniforms.u_time.value = t;
       steamMaterial.uniforms.u_intensity.value = Math.max(0, (chill - 0.45) * 1.8);
 
-      // Bottle Rotation & Float
+      // Bottle Choreographed Horizontal Glide, Rotation & Floating
       if (!reduced) {
+        const isMobileScreen = window.innerWidth < 768;
+        let targetX = 0;
+        if (scroll > 0.35 && scroll <= 0.62) {
+          // Kashmiri Kesar card on left -> bottle moves slightly right
+          targetX = isMobileScreen ? 0 : 0.85;
+        } else if (scroll > 0.62 && scroll <= 0.82) {
+          // Roasted Almonds card on right -> bottle moves slightly left
+          targetX = isMobileScreen ? 0 : -0.85;
+        } else if (scroll > 0.82 && scroll <= 0.94) {
+          // Pure Cow Milk card on left -> bottle moves slightly right
+          targetX = isMobileScreen ? 0 : 0.85;
+        } else {
+          // Hero & Nutrition finale -> perfectly centered
+          targetX = 0;
+        }
+
+        bottleGroup.position.x += (targetX - bottleGroup.position.x) * 0.08;
         bottleGroup.rotation.y = t * 0.25 + scroll * Math.PI * 1.2;
         bottleGroup.rotation.z = gyroTilt.tiltX * 0.15;
 
